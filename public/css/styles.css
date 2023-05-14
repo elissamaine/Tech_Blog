@@ -5,10 +5,13 @@
     --rosy-brown: #b49286ff;
     --chestnut: #914943ff;
     --blood-red: #6e0000ff;
+    --linen: #f5ece4ff;
 }
 
+/* if dun is too dark for the background, use linen */
 body {
     background-color: var(--dun);
+    font-family: 'Comfortaa', cursive;
 }
 
 main {
