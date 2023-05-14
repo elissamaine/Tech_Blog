@@ -1,0 +1,16 @@
+:root {
+    --old-rose: #c78283ff;
+    --misty-rose: #f3d9dcff;
+    --dun: #d7bea8ff;
+    --rosy-brown: #b49286ff;
+    --chestnut: #914943ff;
+    --blood-red: #6e0000ff;
+}
+
+body {
+    background-color: var(--dun);
+}
+
+main {
+    display: block;
+}
