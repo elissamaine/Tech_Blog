@@ -2,6 +2,7 @@
   {{#each user.blogposts as |blogpost|}}
     {{> blogpost}}
   {{/each}}
+  <a class="link" href="/create">Create New</a>
 {{else}}
   <a href="/login">Please login to view and create your own posts</a>
 {{/if}}

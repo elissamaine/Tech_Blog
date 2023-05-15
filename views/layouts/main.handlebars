@@ -26,18 +26,18 @@
       <nav>
         <ul class="nav nav-tabs">
           <li class="nav-item">
-            <a class="nav-link" href="/">Home</a>
+            <a class="link" href="/">Home</a>
           </li>
           {{#if logged_in}}
           <li class="nav-item">
-            <a class="nav-link" href="/dashboard">Dashboard</a>
+            <a class="link" href="/profile">Dashboard</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/logout">Logout</a>
+            <button class="logout">Logout</button>
           </li>
           {{else}}
           <li class="nav-item">
-            <a class="nav-link" href="/login">Login</a>
+            <a class="link" href="/login">Login</a>
           </li>
           {{/if}}
         </ul>
