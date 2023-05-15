@@ -19,7 +19,7 @@
 
   {{#if logged_in}}
     <form class="comment-form">
-      <textarea name="comment_text" placeholder="Leave a comment..."></textarea>
+      <textarea name="comment_text" maxlength="300" placeholder="Leave a comment..."></textarea>
       <button type="submit"></button>
     </form>
   {{else}}
