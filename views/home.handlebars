@@ -1,0 +1,7 @@
+{{#if blogposts.length}}
+  {{#each blogposts as |blogpost|}}
+    {{> blogpost}}
+  {{/each}}
+{{else}}
+  <h2>No Blog Posts Found.</h2>
+{{/if}}

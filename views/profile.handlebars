@@ -1,0 +1,7 @@
+{{#if logged_in }}
+  {{#each user.blogposts as |blogpost|}}
+    {{> blogpost}}
+  {{/each}}
+{{else}}
+  <a href="/login">Please login to view and create your own posts</a>
+{{/if}}
