@@ -30,6 +30,7 @@ router.post('/login', async (req, res) => {
     const userInput = await User.findOne({
       where: { email: req.body.email },
     });
+    console.log('/n ------------ login user routes ---------- /n')
     if (!userInput) {
       res
         .status(400)
