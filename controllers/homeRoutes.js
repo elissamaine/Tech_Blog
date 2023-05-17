@@ -41,7 +41,7 @@ router.get('/profile', withAuth, async (req, res) => {
   }
 });
 
-router.get('/blogPost/:id', async (req, res) => {
+router.get('/blogpost/:id', async (req, res) => {
   try {
     const blogPostData = await BlogPost.findByPk(req.params.id, {
       include: [
@@ -51,22 +51,23 @@ router.get('/blogPost/:id', async (req, res) => {
         },
         {
           model: Comment,
-          attributes: ['comment_text'],
+          attributes: ['comment_text', 'user_id'],
           include: [
             { 
-              model: User, 
-              attributes: { exclude: ['password'] }, 
-              as: 'commenter' 
+              model: User,  
+              attributes: ['username'], 
             }
           ],
         },
       ],
     });
+    console.log('/n ------------ blogpost/:id ---------- /n')
 
     const blogPost = blogPostData.get({ plain: true });
+    console.log(blogPost);
 
-    res.render('blogPost', {
-      ...blogPost,
+    res.render('bpdisplay', {
+      blogPost,
       logged_in: req.session.logged_in,
     });
   } catch (err) {

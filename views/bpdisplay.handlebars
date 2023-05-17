@@ -1,18 +1,18 @@
 <div class="post container">
   <div>
-    <h2>{{blogpost.title}}</h2>
-    <h3>by {{blogpost.user.name}}</h3>
-    <p>{{blogpost.content}}</p>
+    <h2>{{blogPost.title}}</h2>
+    <h3>by {{blogPost.user.username}}</h3>
+    <p>{{blogPost.content}}</p>
   </div>
 </div>
 
 <div class="comment-section">
-  {{#if comment.length}}
+  {{#if blogPost.comments.length}}
     <h3>Comments</h3>
-    {{#each comment}}
+    {{#each blogPost.comments as |comment|}}
       <div class="comment">
-        <h4>{{user.name}}</h4>
-        <p>{{comment_text}}</p>
+        <h4>{{comment.user.username}}</h4>
+        <p>{{comment.comment_text}}</p>
       </div>
     {{/each}}
   {{/if}}
