@@ -6,6 +6,15 @@
   </div>
 </div>
 
+<div>
+  {{#isEqual blogPost.user_id  logged_in.user.id}}
+    <form class="delete-form">
+      <button class="delete-post-btn" type="submit"></button>
+    </form>
+  {{/isEqual}}
+</div>
+
+
 <div class="comment-section">
   {{#if blogPost.comments.length}}
     <h3>Comments</h3>
