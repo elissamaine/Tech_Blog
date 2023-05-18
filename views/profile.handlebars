@@ -1,8 +1,18 @@
-{{#if logged_in }}
+
+{{#if user.blogposts.length}}
+  <h1>Blog Posts By {{user.username}}</h1>
   {{#each user.blogposts as |blogpost|}}
-    {{> blogpost}}
-  {{/each}}
-  <a class="link" href="/blogpost_input">Create New</a>
+    <div class="row m-2">
+      <div>
+        <h2><a id="blogpostTitle" href="/blogpost/{{blogpost.id}}">{{blogpost.title}}</a></h2>
+      </div>
+      <div>
+        <p>{{blogpost.content}}</p>
+      </div>
+    </div>
+  {{/each}} 
 {{else}}
-  <a href="/login">Please login to view and create your own posts</a>
+    
 {{/if}}
+
+<a class="link" href="/blogpost_input">Create New</a>
