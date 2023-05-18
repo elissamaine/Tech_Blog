@@ -1,6 +1,14 @@
-{{#if blogposts.length}}
-  {{#each blogposts as |blogpost|}}
-    {{> blogpost}}
+{{#if blogPosts.length}}
+  {{#each blogPosts as |blogpost|}}
+    <div class="row m-2">
+      <div>
+        <h2><a id="partialsTitle" href="/blogpost/{{blogpost.id}}">{{blogpost.title}}</a></h2>
+      </div>
+      <div>
+        <h3>By {{blogpost.user.username}}</h3>
+        <p>{{blogpost.content}}</p>
+      </div>
+    </div>
   {{/each}}
 {{else}}
   <h2>No Blog Posts Found.</h2>
