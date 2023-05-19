@@ -21,4 +21,4 @@ const postComment = async (event) => {
   }
 };
 
-document.querySelector('#Cbutton').addEventListener('submit', postComment);
+document.querySelector('#Cbutton').addEventListener('click', postComment);

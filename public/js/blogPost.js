@@ -1,11 +1,12 @@
 const postBlog = async (event) => {
   event.preventDefault();
+  console.log('postBlog function is running');
 
   const postTitle = document.querySelector('#title-input').value.trim();
   const postContent = document.querySelector('#content-input').value.trim();
   let postData;
 
-  if (title && content) {
+  if (postTitle && postContent) {
     postData = {
       title: postTitle,
       content: postContent,
@@ -28,4 +29,4 @@ const postBlog = async (event) => {
   }
 };
 
-document.querySelector('#BPbutton').addEventListener('submit', postBlog);
+document.querySelector('#BPbutton').addEventListener('click', postBlog);
