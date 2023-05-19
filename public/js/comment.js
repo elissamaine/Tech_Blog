@@ -2,15 +2,20 @@ const postComment = async (event) => {
   event.preventDefault();
 
   const commentContent = document.querySelector('#comment-input').value.trim();
+  const commentPostId = window.location.pathname.split('/').pop();
 
   if (!commentContent) {
     alert('Please enter a comment.');
   }
-  console.log(commentContent);
+
+  const commentData = {
+    comment_text: commentContent,
+    post_id: commentPostId,
+  }
   
   const response = await fetch('/api/comments', {
     method: 'POST',
-    body: JSON.stringify({ commentContent }),
+    body: JSON.stringify(commentData),
     headers: { 'Content-Type': 'application/json' },
   });
 
@@ -18,6 +23,7 @@ const postComment = async (event) => {
     document.location.reload();
   } else {
     alert(response.statusText);
+    console.log(response);
   }
 };
 
