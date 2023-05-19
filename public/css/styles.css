@@ -10,7 +10,9 @@
 
 /* if dun is too dark for the background, use linen */
 body {
-    background-color: var(--dun);
+    background-image: url('../../assets/dusty-rose.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     font-family: 'Comfortaa', cursive;
 }
 
