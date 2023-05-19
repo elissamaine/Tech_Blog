@@ -19,6 +19,8 @@ const deletePost = async (event) => {
   }
 };
 
-document
-  .querySelector('.delete-post-btn')
-  .addEventListener('click', deletePost);
+const deletePostBtns = document.querySelectorAll('.delete-post-btn');
+
+deletePostBtns.forEach((button) => {
+  button.addEventListener('click', deletePost);
+});
