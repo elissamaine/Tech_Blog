@@ -95,6 +95,24 @@ router.get('/blogpost_input', withAuth, async (req, res) => {
   }
 });
 
+router.get('/blogpost_edit/:id', withAuth, async (req, res) => {
+  try {
+    const blogPostData = await BlogPost.findByPk(req.params.id, {
+      include: [{ model: User }],
+    });
+
+    const blogPost = blogPostData.get({ plain: true });
+    console.log(blogPost);
+
+    res.render('bpedit', {
+      blogPost,
+      logged_in: true,
+    })
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/profile');
