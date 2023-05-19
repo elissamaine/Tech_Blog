@@ -27,3 +27,5 @@ const postBlog = async (event) => {
     alert(response.statusText);
   }
 };
+
+document.querySelector('#BPbutton').addEventListener('submit', postBlog);
