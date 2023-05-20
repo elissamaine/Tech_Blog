@@ -78,6 +78,7 @@ header {
 .btn:hover {
     box-shadow: 2px 2px 5px var(--misty-rose);
     background-color: var(--old-rose);
+    color: var(--linen);
 }
 
 .link {
@@ -162,6 +163,27 @@ header {
 .create-new {
     justify-content: center;
     display: flex;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.blogpost-input {
+    box-shadow: 3px 3px 5px var(--rosy-brown);
+}
+
+.form-title {
+    width: 500px;
+    height: 50px;
+}
+
+.form-content {
+    width: 500px;
+    height: 200px;
 }
 
 main {
