@@ -110,16 +110,20 @@ header {
     background-color: var(--beaver);
     border-radius: 15px;
     padding: 1rem;
+    color: var(--linen);
+    text-shadow: 2px 2px 5px var(--blood-red);
 }
 
 #blogpostTitle {
     text-decoration: none;
-    color: var(--blood-red); 
+    color: var(--linen);
+    text-shadow: 2px 2px 5px var(--blood-red); 
 }
 
 #blogpostTitle:hover {
     text-decoration: none;
     text-shadow: 3px 3px 5px var(--misty-rose);
+    color: var(--blood-red);
 }
 
 .logout-btn {
@@ -184,6 +188,53 @@ header {
 .form-content {
     width: 500px;
     height: 200px;
+}
+
+.post-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    background-color: var(--rosy-brown);
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.comment-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--rosy-brown);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+}
+
+.comment-header {
+    display: flex;
+    background-color: var(--beaver);
+    padding: 2px;
+    margin: 2px;
+    border-radius: 20px;
+    width: 100%;
+    justify-content: center;
+    color: var(--linen);
+    text-shadow: 2px 2px 5px var(--blood-red);
+}
+
+.comment {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: dotted 1px var(--blood-red);
+    margin: 4px;
 }
 
 main {

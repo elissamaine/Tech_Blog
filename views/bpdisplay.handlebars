@@ -1,25 +1,33 @@
-<div class="post container">
-  <div>
+<div class="post-container">
+  <div class="title-box">
     <h2>{{blogPost.title}}</h2>
     <h3>by {{blogPost.user.username}}</h3>
-    <p>{{blogPost.content}}</p>
+  </div>
+  <div>
+    <h4>{{blogPost.content}}</h4>
   </div>
 </div>
 
 <div class="comment-section">
   {{#if blogPost.comments.length}}
-    <h3>Comments</h3>
+    <div class="comment-header">
+      <h3>Comments</h3>
+    </div>
     {{#each blogPost.comments as |comment|}}
       <div class="comment">
-        <h4>{{comment.user.username}}</h4>
-        <p>{{comment.comment_text}}</p>
+        <div class="comment-user">
+          <p>{{comment.user.username}}: &nbsp;&nbsp;</p>
+        </div>
+        <div class="comment-text">
+          <p>{{comment.comment_text}}</p>
+        </div>
       </div>
     {{/each}}
   {{/if}}
 
   {{#if logged_in}}
     <form class="comment-form">
-      <textarea name="comment_text" maxlength="300" placeholder="Leave a comment..." id="comment-input"></textarea>
+      <textarea name="comment_text" class="form-input" maxlength="300" placeholder="Leave a comment..." id="comment-input"></textarea>
       <button class="btn " type="submit" id="Cbutton">Post</button>
     </form>
   {{else}}
