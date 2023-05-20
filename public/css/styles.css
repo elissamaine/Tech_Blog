@@ -130,11 +130,38 @@ header {
     background-color: var(--old-rose);
 }
 
+.logout-btn:focus {
+    border: none;
+}
+
 .userposts {
     display: flex;
     align-items: center;
     justify-content: center;
     text-shadow: 1px 1px 2px var(--beaver);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem; 
+}
+
+.form-input {
+    border-radius: 15px;
+    padding: 8px;
+    border: none;
+    margin: 0.5rem;
+}
+
+.form-input:focus {
+    outline: 1px solid var(--blood-red);
+    background-color: var(--misty-rose);
+}
+
+.create-new {
+    justify-content: center;
+    display: flex;
 }
 
 main {
