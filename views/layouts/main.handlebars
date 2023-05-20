@@ -19,8 +19,8 @@
   </head>
 
   <body>
-    <header class="">
-      <h1>
+    <header class="header">
+      <h1 class="title-container">
        <a id="title" href="/">Tech Blog</a> 
       </h1>
       <nav>
@@ -33,7 +33,7 @@
             <a class="link" href="/profile">Profile</a>
           </li>
           <li class="nav-item">
-            <button class="logout">Logout</button>
+            <button class="link logout-btn">Logout</button>
           </li>
           {{else}}
           <li class="nav-item">
@@ -49,13 +49,11 @@
     </main>
 
     <footer>
-
+      {{!-- <p>&#127801 Created by Elissa &#127801</p> --}}
     </footer>
 
     {{#if logged_in}}
       <script src='/js/logout.js'></script>
-      {{!-- <script src='/js/deletePost.js'></script>
-      <script src='/js/deleteComment.js'></script> --}}
     {{/if}}
   </body>
 </html>

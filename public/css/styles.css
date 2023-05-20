@@ -6,16 +6,149 @@
     --chestnut: #914943ff;
     --blood-red: #6e0000ff;
     --linen: #f5ece4ff;
+    --beaver: #a38479ff;
 }
 
 /* if dun is too dark for the background, use linen */
 body {
-    background-image: url('../../assets/dusty-rose.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: var(--dun);
     font-family: 'Comfortaa', cursive;
+    font-size: 1.2rem;
+    color: var(--blood-red);
+
+}
+
+header {
+    background-color: var(--rosy-brown);
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 5px solid var(--beaver);
+}
+
+.title-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#title {
+    font-size: 4rem;
+    color: var(--chestnut);
+    text-align: center;
+    text-shadow: 1px 1px 2px var(--blood-red);
+}
+
+#title:hover {
+    color: var(--old-rose);
+    text-shadow: 2px 2px 5px var(--misty-rose);
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: none;
+    border-top: 5px solid var(--beaver);
+}
+
+.nav-item {
+    margin: 0.5rem;
+    background-color: var(--chestnut);
+    border-radius: 15px;
+    padding: 8px;
+    color: var(--linen);
+    
+}
+
+.nav-item:hover {
+    box-shadow: 2px 2px 5px var(--misty-rose);
+    background-color: var(--old-rose);
+}
+
+.btn {
+    background-color: var(--chestnut);
+    border-radius: 15px;
+    padding: 8px;
+    color: var(--linen);
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: 2px 2px 5px var(--misty-rose);
+    background-color: var(--old-rose);
+}
+
+.link {
+    text-decoration: none;
+    color: var(--linen);
+}
+
+.link:hover {
+    color: var(--misty-rose);
+    text-decoration: none;
+}
+
+.blog-post-small {
+    background-color: var(--rosy-brown);
+    /* border: 5px solid var(--beaver); */
+    border-radius: 15px;
+    padding: 1rem;
+    margin: 1rem;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--beaver);
+    border-radius: 15px;
+    padding: 1rem;
+}
+
+#blogpostTitle {
+    text-decoration: none;
+    color: var(--blood-red); 
+}
+
+#blogpostTitle:hover {
+    text-decoration: none;
+    text-shadow: 3px 3px 5px var(--misty-rose);
+}
+
+.logout-btn {
+    background-color: var(--chestnut);
+    border: none;
+}
+
+.logout-btn:hover {
+    background-color: var(--old-rose);
+}
+
+.userposts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 1px 1px 2px var(--beaver);
 }
 
 main {
     display: block;
 }
+
+/* footer {
+    background-color: var(--rosy-brown);
+    padding: 0.5rem;
+    margin-top: 1rem;
+    border-top: 5px solid var(--beaver);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+} */

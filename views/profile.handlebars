@@ -1,12 +1,12 @@
 
 {{#if user.blogposts.length}}
-  <h1>Blog Posts By {{user.username}}</h1>
+  <h1 class="userposts">Blog Posts By {{user.username}}</h1>
   {{#each user.blogposts as |blogpost|}}
-    <div class="row m-2">
-      <div>
-        <h2><a id="blogpostTitle" href="/blogpost/{{blogpost.id}}">{{blogpost.title}}</a></h2>
+    <div class="row m-2 blog-post-small">
+      <div class="title-box">
+        <h2><a id="blogpostTitle" class="hyperlink" href="/blogpost/{{blogpost.id}}">{{blogpost.title}}</a></h2>
       </div>
-      <div>
+      <div class="content-box">
         <p>{{blogpost.content}}</p>
       </div>
       <div>
